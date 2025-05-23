@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-gray-200  rounded-2xl flex justify-between items-center px-10">
+    <div className="bg-gray-200  rounded-sm flex justify-between items-center px-10 fixed top-0 w-full z-50 shadow-md">
       <div className="flex items-center">
               <img src="../../public/logoN.png " className="w-24 h-20" alt="" />
               <img src="../../public/logoimg.png" className="w-20 pt-3 opacity-30 absolute left-28" alt="" />
