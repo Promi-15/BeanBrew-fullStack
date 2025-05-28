@@ -1,12 +1,12 @@
 import React from "react";
 import Banner from "../Components/Banner";
-import Lists from "../Components/Lists";
+import Menu from "../Components/Menu";
 
 const HomePage = () => {
   return (
     <div className="">
       <Banner />
-      <Lists/>
+      <Menu/>
     </div>
   );
 };
