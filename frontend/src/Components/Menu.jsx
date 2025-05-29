@@ -8,7 +8,7 @@ const Menu = () => {
       <div className="grid lg:grid-cols-3  gap-5 mt-10 ml-15 grid-cols-1">
         <div>
           <img
-            src="../../public/coldCof1.jpg"
+            src="/coldCof1.jpg"
             className="rounded-xl hover:shadow-2xl lg:h-[480px]"
             alt=""
           />
@@ -18,7 +18,7 @@ const Menu = () => {
         </div>
         <div>
           <img
-            src="../../public/expresso.jpg"
+            src="/expresso.jpg"
             className="rounded-xl hover:shadow-2xl lg:h-[480px]"
             alt=""
           />
@@ -28,7 +28,7 @@ const Menu = () => {
         </div>
         <div>
           <img
-            src="../../public/matcha1.jpg"
+            src="/matcha1.jpg"
             className="rounded-xl hover:shadow-2xl lg:h-[480px]"
             alt=""
           />
