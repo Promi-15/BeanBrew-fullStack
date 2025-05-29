@@ -6,12 +6,14 @@ const Navbar = () => {
   return (
     <div className="bg-gray-200  rounded-sm flex justify-between items-center px-10 lg:fixed lg:top-0 w-full z-50 shadow-md">
       <div className="flex items-center">
-        <img src="/logoN.png " className="w-24 h-20" alt="" />
-        <img
+       
+        <Link to={"/"}>
+       <img src="/logoN.png " className="w-24 h-20" alt="" />
+          <img
           src="/logoimg.png"
-          className="w-20 pt-3 opacity-30 absolute left-28"
+          className="w-20 pt-3 opacity-45 absolute left-28 top-0"
           alt=""
-        />
+        /></Link>
       </div>
       <div>
         <img

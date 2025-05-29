@@ -1,6 +1,44 @@
-import React from "react";
+import Swal from "sweetalert2"
 
 const CreateCoffee = () => {
+  //   const [formData, setFormData] = useState(null);
+
+  const handleAdd = async (e) => {
+    e.preventDefault();
+    const coffeeName = e.target.name.value;
+    const price = e.target.price.value;
+    const image = e.target.image.value;
+
+    const formData = {
+      coffeeName,
+      price,
+      image,
+    };
+    console.log(formData);
+
+    const res = await fetch("/api/coffee", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    //ami backend theke j msg ditesi pita antese
+    const data = await res.json();
+    console.log(data);
+
+    // top e oi msg success e show kortese
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: data.message,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    e.target.reset()
+  };
+
   return (
     <div
       className="lg:mt-20 lg:py-10  min-h-screen "
@@ -16,8 +54,11 @@ const CreateCoffee = () => {
         className="flex items-center  justify-center  max-w-7xl mx-auto rounded-md bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-10  
 "
       >
-        <form className="flex flex-col gap-2.5   lg:p-10 lg:w-1/2 lg:h-[500px]">
-          <label className="opacity-45">Name</label>
+        <form
+          className="flex flex-col gap-6  lg:p-10 lg:w-1/2 lg:h-[500px]"
+          onSubmit={handleAdd}
+        >
+          <label className="text-lg">Name</label>
           <input
             type="text"
             name="name"
@@ -25,7 +66,7 @@ const CreateCoffee = () => {
             className="p-2 border-2 w-full"
             placeholder="name"
           />
-          <label className="opacity-45">Price</label>
+          <label className="text-lg">Price</label>
           <input
             type="number"
             name="price"
@@ -33,7 +74,7 @@ const CreateCoffee = () => {
             className="p-2 border-2 w-full"
             placeholder="price"
           />
-          <label className="opacity-45">Image</label>
+          <label className="text-lg">Image</label>
           <input
             type="text"
             name="image"
@@ -41,12 +82,15 @@ const CreateCoffee = () => {
             className="p-2 border-2 w-full"
             placeholder="image"
           />
-          <button className="btn my-3 bg-transparent font-bold text-xl hover:shadow-2xl hover:shadow-cyan-200 hover:text-white">
+          <button
+            className="btn my-3 bg-transparent font-bold text-xl hover:shadow-2xl hover:shadow-cyan-200 hover:text-white"
+            type="submit"
+          >
             Create
           </button>
         </form>
-              <div className="relative">
-                  <div className="absolute inset-0 bg-black opacity-50 z-10 rounded-md"></div>
+        <div className="relative">
+          <div className="absolute inset-0 bg-black opacity-50 z-10 rounded-md"></div>
           <img src="../../public/iceCofi1.jpg" alt="" />
         </div>
       </div>
