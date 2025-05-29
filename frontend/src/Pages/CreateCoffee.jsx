@@ -1,8 +1,7 @@
 import Swal from "sweetalert2"
 
 const CreateCoffee = () => {
-  //   const [formData, setFormData] = useState(null);
-
+  
   const handleAdd = async (e) => {
     e.preventDefault();
     const coffeeName = e.target.name.value;
