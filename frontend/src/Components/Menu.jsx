@@ -6,7 +6,7 @@ const Menu = () => {
       <p className="text-center text-5xl font-bold italic text-white">
         Our Menu
       </p>
-      <p className="text-center italic text-sm opacity-40 max-w-7xl mx-auto text-white">
+      <p className="text-center italic text-sm opacity-40 max-w-7xl mx-auto text-white my-5 ">
         A coffee menu offers a delightful variety of beverages made from rich,
         roasted coffee beans. It typically includes classics like espresso,
         cappuccino, latte, and Americano, along with iced options and flavored
@@ -14,12 +14,12 @@ const Menu = () => {
         strong and bold or smooth and creamy, the coffee menu caters to all
         tastes, making it perfect for every coffee lover.
       </p>
-      <div className="grid lg:grid-cols-2 grid-cols-1">
-        <div className="lg:w-[650px] mx-auto my-10 bg-gray-200 p-5  space-y-6 ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 px-2">
+        <div className="lg:w-[700px] lg:mx-auto my-10 bg-gray-200 p-5  space-y-6 rounded-tl-4xl px-2  ">
           <div className="flex flex-row justify-between">
             <img
-              src="../../public/expresso.jpg"
-              className="w-15 rounded-full"
+              src="../../public/coffee2.jpg"
+              className="w-16 rounded-full shadow-2xl hidden lg:block  "
               alt=""
             />
             <div className="flex flex-col">
@@ -41,7 +41,7 @@ const Menu = () => {
           <div className="flex flex-row justify-between gap-5">
             <img
               src="../../public/coldCof1.jpg"
-              className="w-15 rounded-full"
+              className="w-15 rounded-full shadow-2xl hidden lg:block "
               alt=""
             />
             <div className="flex flex-col">
@@ -63,7 +63,7 @@ const Menu = () => {
           <div className="flex flex-row justify-between gap-5">
             <img
               src="../../public/iceCofi1.jpg"
-              className="w-15 rounded-full"
+              className="w-15 rounded-full shadow-2xl hidden lg:block "
               alt=""
             />
             <div className="flex flex-col">
@@ -87,7 +87,7 @@ const Menu = () => {
           <div className="flex flex-row justify-between gap-5">
             <img
               src="../../public/matcha1.jpg"
-              className="w-15 rounded-full"
+              className="w-15 rounded-full shadow-2xl hidden lg:block "
               alt=""
             />
             <div className="flex flex-col">
@@ -107,41 +107,41 @@ const Menu = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-[650px] my-10 ">
-          <p className="italic font-bold bg-gradient-to-bl from-red-950 to-pink-900 p-6"> Time to open and close</p>
-          <div className="flex flex-row justify-between  bg-gray-200 px-10 py-3.5">
+        <div className="lg:w-[650px] my-10   rounded-tl-4xl">
+          <p className="italic font-bold bg-gradient-to-bl from-red-950 to-pink-900 p-6  "> Time to open and close</p>
+          <div className="flex flex-row justify-between  bg-gray-200 px-10 py-3.5 cursor-pointer">
             <p>Sunday</p>
             <p>Closed</p>
           </div>
           <hr />
-          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5">
+          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5 cursor-pointer">
             <p>Monday</p>
             <p>6.00am-7.00pm</p>
           </div>
           <hr />
-          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5">
+          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5 cursor-pointer">
             <p>Tuesday</p>
             <p>6.00am-7.00pm</p>
           </div>
           <hr />
-          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5">
+          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5 cursor-pointer">
             <p>Wednesday</p>
             <p>6.00am-7.00pm</p>
           </div>
           <hr />
-          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5">
+          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5 cursor-pointer">
             <p>Thursday</p>
             <p>6.00am-7.00pm</p>
           </div>
           <hr />
-          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5">
+          <div className="flex flex-row justify-between  bg-gray-200 px-10  py-3.5 cursor-pointer">
             <p>Friday</p>
             <p>6.00am-3.00pm</p>
           </div>
         </div>
       </div>
       <Link to={"/lists"}>
-        <button className="btn mt-10 text-xl p-6 border-t-lime-950 hover:border-lime-950 hover:bg-gradient-to-r hover:from-red-950 hover:to-90% ">
+        <button className=" mt-10 btn bg-gradient-to-l  from-bg-red-950 to-red-500 p-5 font-bold hover:shadow-2xl hover:shadow-white ">
           See More...
         </button>
       </Link>
