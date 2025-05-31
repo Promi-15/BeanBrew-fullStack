@@ -40,7 +40,7 @@ const CreateCoffee = () => {
 
   return (
     <div
-      className="lg:mt-20 lg:py-10  min-h-screen "
+      className="lg:mt-20  lg:py-10  min-h-screen "
       style={{
         background:
           "radial-gradient(circle, rgba(122,13,50,1) 0%, rgba(148,187,233,1) 100%)",
@@ -50,11 +50,11 @@ const CreateCoffee = () => {
         Create A new item
       </p>
       <div
-        className="flex items-center  justify-center  max-w-7xl mx-auto rounded-md bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-10  
+        className="flex flex-col lg:flex-row items-center  justify-center  max-w-7xl lg:mx-auto rounded-md bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-10  px-5  
 "
       >
         <form
-          className="flex flex-col gap-6  lg:p-10 lg:w-1/2 lg:h-[500px]"
+          className="flex flex-col gap-6 w-full  lg:p-10 lg:w-1/2 lg:h-[500px]"
           onSubmit={handleAdd}
         >
           <label className="text-lg">Name</label>
@@ -88,7 +88,7 @@ const CreateCoffee = () => {
             Create
           </button>
         </form>
-        <div className="relative">
+        <div className="relative hidden lg:block">
           <div className="absolute inset-0 bg-black opacity-50 z-10 rounded-md"></div>
           <img src="../../public/iceCofi1.jpg" alt="" />
         </div>
