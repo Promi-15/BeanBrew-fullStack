@@ -90,7 +90,7 @@ const CreateCoffee = () => {
         </form>
         <div className="relative hidden lg:block">
           <div className="absolute inset-0 bg-black opacity-50 z-10 rounded-md"></div>
-          <img src="../../public/iceCofi1.jpg" alt="" />
+          <img src="/iceCofi1.jpg" alt="" />
         </div>
       </div>
     </div>

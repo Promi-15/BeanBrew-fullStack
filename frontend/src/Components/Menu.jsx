@@ -18,7 +18,7 @@ const Menu = () => {
         <div className="lg:w-[700px] lg:mx-auto my-10 bg-gray-200 p-5  space-y-6 rounded-tl-4xl px-2  ">
           <div className="flex flex-row justify-between">
             <img
-              src="../../public/coffee2.jpg"
+              src="/coffee2.jpg"
               className="w-16 rounded-full shadow-2xl hidden lg:block  "
               alt=""
             />
@@ -40,7 +40,7 @@ const Menu = () => {
           </div>
           <div className="flex flex-row justify-between gap-5">
             <img
-              src="../../public/coldCof1.jpg"
+              src="/coldCof1.jpg"
               className="w-15 rounded-full shadow-2xl hidden lg:block "
               alt=""
             />
@@ -62,7 +62,7 @@ const Menu = () => {
           </div>
           <div className="flex flex-row justify-between gap-5">
             <img
-              src="../../public/iceCofi1.jpg"
+              src="/iceCofi1.jpg"
               className="w-15 rounded-full shadow-2xl hidden lg:block "
               alt=""
             />
@@ -86,7 +86,7 @@ const Menu = () => {
           </div>
           <div className="flex flex-row justify-between gap-5">
             <img
-              src="../../public/matcha1.jpg"
+              src="/matcha1.jpg"
               className="w-15 rounded-full shadow-2xl hidden lg:block "
               alt=""
             />

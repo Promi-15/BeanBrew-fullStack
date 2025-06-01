@@ -6,7 +6,7 @@ const BreadBanner = () => {
       <div className="flex lg:flex-row flex-col lg:gap-5">
          <div className="my-24 lg:w-1/2">
         {/* <video autoPlay loop muted src="../../public/coffeeVid.mp4" className='w-[700px]'></video> */}
-        <img src="../../public/coffee2.jpg" alt="" />
+        <img src="/coffee2.jpg" alt="" />
       </div>
       <div className="lg:my-14   lg:w-1/2 lg:space-y-4 space-y-3 mx-2">
         <p className="italic font-bold text-2xl text-center dancing-script">Bread Menu</p>
@@ -84,14 +84,14 @@ const BreadBanner = () => {
      </div>
       <div className=" absolute top-80 w-40 right-0 lg:right-0 lg:w-60 lg:-top-6">
         <img
-          src="../../public/coffeeBean.png"
+          src="/coffeeBean.png"
           alt=""
           className=" opacity-40 mt-0"
         />
       </div>
       <div className=" absolute  lg:right-0 lg:w-60 lg:-bottom-1 w-40 right-0 -bottom-20">
         <img
-          src="../../public/coffeeBean.png"
+          src="/coffeeBean.png"
           alt=""
           className=" opacity-40 mt-0"
         />
