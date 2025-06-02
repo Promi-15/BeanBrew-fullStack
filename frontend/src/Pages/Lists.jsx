@@ -1,28 +1,36 @@
 import { useEffect, useState } from "react";
-import { IoTrashBinOutline } from "react-icons/io5";
+import { IoPencilOutline, IoTrashBinOutline } from "react-icons/io5";
 import Swal from "sweetalert2";
+import useUpdateModalStore from "../updateModalStore";
 const Lists = () => {
   const [coffees, setCoffees] = useState([]);
-  useEffect(() => {
-    const getCoffees = async () => {
+  const { openUpdateModal, setUpdatingCoffee } = useUpdateModalStore();
+
+  const getCoffees = async () => {
       try {
         const res = await fetch("/api/coffee");
-        console.log(res);
+        // console.log(res);
         if (!res.ok) {
           alert("something wrong", res.statusText);
         }
         const data = await res.json();
         setCoffees(data);
+
         console.log(data);
       } catch (error) {
         console.log("not fetching", error);
       }
-    };
+  };
+  
+
+    
+
+  useEffect(() => {
     getCoffees();
   }, []);
 
   const handleDelete = async (id) => {
-    const result = await Swal.fire({
+    await Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
       icon: "warning",
@@ -30,39 +38,46 @@ const Lists = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
-    })
-    .then(async (result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
-      try {
-        const res = await fetch(`/api/coffee/${id}`, {
-          method: "DELETE",
-        });
-        const data = await res.json();
-        if (res.ok) {
-          setCoffees((prev)=>prev.filter((coffee)=> coffee._id !=id))
+        try {
+          const res = await fetch(`/api/coffee/${id}`, {
+            method: "DELETE",
+          });
+          const data = await res.json();
+          /*
+            "name": "promi",
+            "roll": "31"
+
+            data = {
+              name: "promi",
+              roll: 31
+            }
+          */
+          if (res.ok) {
+            setCoffees((prev) => prev.filter((coffee) => coffee._id != id));
             Swal.fire({
               title: "Deleted!",
               text: "Your file has been deleted.",
               icon: "success",
-            })
-          ;
-        } else {
-           Swal.fire({
+            });
+          } else {
+            Swal.fire({
               title: "Failed!",
-              text:` Your file can not delete.${data.message}`,
+              text: ` Your file can not delete.${data.message}`,
               icon: "warning",
-            })
+            });
+          }
+        } catch (error) {
+          Swal.fire({
+            title: "Error!",
+            text: `Something wrong ${error.message}`,
+            icon: "error",
+          });
         }
-      } catch (error) {
-              Swal.fire({
-              title: "Error!",
-              text: `Something wrong ${error.message}`,
-              icon: "error",
-            })       
       }
-    }
-    })
-  window.location.reload()
+    });
+    window.location.reload();
   };
 
   return (
@@ -84,11 +99,22 @@ const Lists = () => {
               </p>
               <div>
                 <p>${coffee.price}</p>
-                <div className="flex justify-center gap-3 items-center border-gray-300 border-2 rounded-3xl px-2 cursor-pointer">
-                  <p onClick={() => handleDelete(coffee._id)} >Delete</p>
-                  <p>
-                    <IoTrashBinOutline />
-                  </p>
+                <div className="flex justify-around gap-3 items-center ">
+                  <div className="flex items-center justify-between border-gray-300 border-2 rounded-3xl px-3 cursor-pointer gap-3 py-2" onClick={() => handleDelete(coffee._id)}>
+                    <p >Delete</p>
+                    <p className="text-sm">
+                      <IoTrashBinOutline />
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between border-gray-300 border-2 rounded-3xl px-3 cursor-pointer gap-3 py-2" onClick={() => {
+                    openUpdateModal();
+                    setUpdatingCoffee(coffee);
+                  }} >
+                    <p >Update</p>
+                    <p className="text-sm">
+                     <IoPencilOutline />
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -96,7 +122,7 @@ const Lists = () => {
         </div>
       ))}
     </div>
-  );
+  ); 
 };
 
 export default Lists;
