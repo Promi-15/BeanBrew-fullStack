@@ -6,7 +6,7 @@ const Menu = () => {
       <p className="text-center text-5xl font-bold italic text-white">
         Our Menu
       </p>
-      <p className="text-center italic text-sm opacity-40 max-w-7xl mx-auto text-white my-5 ">
+      <p className="text-center italic text-sm opacity-70 max-w-7xl mx-auto text-white my-5 ">
         A coffee menu offers a delightful variety of beverages made from rich,
         roasted coffee beans. It typically includes classics like espresso,
         cappuccino, latte, and Americano, along with iced options and flavored

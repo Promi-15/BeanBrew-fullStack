@@ -23,7 +23,6 @@ const Lists = () => {
   };
   
 
-    
 
   useEffect(() => {
     getCoffees();

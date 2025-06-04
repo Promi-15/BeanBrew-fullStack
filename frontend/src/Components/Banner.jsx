@@ -17,7 +17,7 @@ const Banner = () => {
          Step into the aroma of <br /> freshly
           coffee
         </h1>
-        <p className="text-white opacity-35" >
+        <p className="text-white opacity-70" >
           Discover a place where every cup is a masterpiece, crafted with
           passion and precision. From the rich, bold flavors of our signature
           blends to the cozy ambiance that feels like home.
