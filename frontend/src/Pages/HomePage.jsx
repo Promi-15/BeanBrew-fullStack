@@ -4,6 +4,7 @@ import Menu from "../Components/Menu";
 import BreadBanner from "../Components/BreadBanner";
 import DiscoverBanner from "../Components/DiscoverBanner";
 import OurChefs from "../Components/OurChefs";
+import Footer from "../Components/Footer";
 
 const HomePage = () => {
   return (
@@ -12,7 +13,8 @@ const HomePage = () => {
       <Menu />
       <BreadBanner />
       <DiscoverBanner />
-      <OurChefs/>
+      <OurChefs />
+      <Footer/>
     </div>
   );
 };
