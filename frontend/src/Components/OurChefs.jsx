@@ -9,7 +9,7 @@ const OurChefs = () => {
           <img alt="" src="/chef1.jpg" className="h-56 w-full object-cover" />
 
           <div className="bg-white p-4 sm:p-6">
-            <time datetime="2022-10-10" className="block text-xs text-gray-500">
+            <time dateTime="2022-10-10" className="block text-xs text-gray-500">
               {" "}
               10th Oct 2022{" "}
             </time>
@@ -35,7 +35,7 @@ const OurChefs = () => {
           <img alt="" src="/chef2.jpg" className="h-56 w-full object-cover" />
 
           <div className="bg-white p-4 sm:p-6">
-            <time datetime="2022-10-10" className="block text-xs text-gray-500">
+            <time dateTime="2022-10-10" className="block text-xs text-gray-500">
               {" "}
               10th Oct 2022{" "}
             </time>
@@ -61,7 +61,7 @@ const OurChefs = () => {
           <img alt="" src="/chef3.jpg" className="h-56 w-full object-cover" />
 
           <div className="bg-white p-4 sm:p-6">
-            <time datetime="2022-10-10" className="block text-xs text-gray-500">
+            <time dateTime="2022-10-10" className="block text-xs text-gray-500">
               {" "}
               10th Oct 2022{" "}
             </time>

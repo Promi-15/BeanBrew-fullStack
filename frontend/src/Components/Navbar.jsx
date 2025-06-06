@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-gray-200  rounded-sm flex justify-between items-center px-10 lg:fixed lg:top-0 w-full z-50 shadow-md">
+    <div className="bg-gray-200  rounded-sm flex justify-between items-center px-10  top-0 w-full z-50 shadow-md relative">
       <div className="flex items-center">
        
         <Link to={"/"}>
@@ -30,7 +30,7 @@ const Navbar = () => {
 
            
              <Link to={"/createNewCoffee"}> <li className="hover:bg-cyan-100 px-8 py-2">ADD New items</li></Link>
-              <li className="hover:bg-cyan-100 px-8 py-2">Login</li>
+              <Link to={"/login"}><li className="hover:bg-cyan-100 px-8 py-2">Login</li> </Link>
               <li className="hover:bg-cyan-100 px-8 py-2">Register</li>
             </ul>
           </div>

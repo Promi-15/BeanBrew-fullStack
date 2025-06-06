@@ -29,7 +29,7 @@ const CreateCoffee = () => {
 
     // top e oi msg success e show kortese
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "success",
       title: data.message,
       showConfirmButton: false,
@@ -40,7 +40,7 @@ const CreateCoffee = () => {
 
   return (
     <div
-      className="lg:mt-20  lg:py-10  min-h-screen "
+      className="  lg:py-10 py-16  min-h-screen "
       style={{
         background:
           "radial-gradient(circle, rgba(122,13,50,1) 0%, rgba(148,187,233,1) 100%)",

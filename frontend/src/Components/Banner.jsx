@@ -9,7 +9,7 @@ const Banner = () => {
           "url(https://i.ibb.co/G4Q5rPF9/white-cup-steaming-coffee-sits-saucer-surrounded-by-coffee-beans-illuminated-by-red-light.jpg)",
       }}
     >
-      <div className=" opacity-50 absolute bg-black inset-0  lg:top-20 "></div>
+      <div className=" opacity-50 absolute bg-black inset-0   "></div>
 
       <div className="top-28 absolute p-10 space-y-10  lg:w-[900px]" >
         <p className="text-white font-medium text-md italic">crafted with love, served with passion</p>
