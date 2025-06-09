@@ -1,9 +1,26 @@
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Menu = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 4000, // slower animations
+      easing: "ease-in-out",
+      delay: 3000, // global default delay
+    });
+  }, []);
+
   return (
-    <div className="py-14 text-center bg-black">
-      <p className="text-center text-5xl font-bold italic text-white">
+    <div
+      className="py-14 text-center bg-black"
+     
+    >
+      <div className="transition-all ease-in duration-1000" data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-delay="2000" >
+        <p className="text-center text-5xl font-bold italic text-white">
         Our Menu
       </p>
       <p className="text-center italic text-sm opacity-70 max-w-7xl mx-auto text-white my-5 ">
@@ -14,8 +31,15 @@ const Menu = () => {
         strong and bold or smooth and creamy, the coffee menu caters to all
         tastes, making it perfect for every coffee lover.
       </p>
+      </div>
       <div className="grid lg:grid-cols-2 grid-cols-1 px-2">
-        <div className="lg:w-[700px] lg:mx-auto my-10 bg-gray-200 p-5  space-y-6 rounded-tl-4xl px-2  ">
+        <div
+          className="lg:w-[700px] lg:mx-auto my-10 bg-gray-200 p-5  space-y-6 rounded-tl-4xl px-2 transition-all ease-in duration-1000"
+          data-aos="zoom-in-up"
+          data-aos-easing="linear"
+          data-aos-duration="3000"
+          data-aos-delay="2000"
+        >
           <div className="flex flex-row justify-between">
             <img
               src="/coffee2.jpg"
@@ -107,8 +131,17 @@ const Menu = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-[650px] my-10   rounded-tl-4xl">
-          <p className="italic font-bold bg-gradient-to-bl from-red-950 to-pink-900 p-6  "> Time to open and close</p>
+        <div
+          className="lg:w-[650px] my-10   rounded-tl-4xl transition-all ease-in duration-1000"
+          data-aos="zoom-in-up"
+          data-aos-easing="linear"
+          data-aos-duration="3000"
+          data-aos-delay="2000"
+        >
+          <p className="italic font-bold bg-gradient-to-bl from-red-950 to-pink-900 p-6  ">
+            {" "}
+            Time to open and close
+          </p>
           <div className="flex flex-row justify-between  bg-gray-200 px-10 py-3.5 cursor-pointer">
             <p>Sunday</p>
             <p>Closed</p>
@@ -141,7 +174,11 @@ const Menu = () => {
         </div>
       </div>
       <Link to={"/lists"}>
-        <button className=" mt-10 btn bg-gradient-to-l  from-bg-red-950 to-red-500 p-5 font-bold hover:shadow-2xl hover:shadow-white ">
+        <button
+          className=" mt-10 btn bg-gradient-to-l  from-bg-red-950 to-red-500 p-5 font-bold hover:shadow-2xl hover:shadow-white transition-all duration-1000 "
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+        >
           See More...
         </button>
       </Link>
