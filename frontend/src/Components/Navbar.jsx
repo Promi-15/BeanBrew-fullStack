@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import Swal from "sweetalert2";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { loginWithRedirect } = useAuth0();
-  const { user, isAuthenticated, logout } = useAuth0();
+  const { user, isAuthenticated, logout,isLoading } = useAuth0();
+   const [loginShown, setLoginShown] = useState(false);
+
+  const handleLogin = () => {
+    loginWithRedirect()
+  }
+
+   useEffect(() => {
+    if (isAuthenticated && !loginShown && !isLoading) {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Login successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setLoginShown(true);
+    }
+  }, [isAuthenticated, isLoading, loginShown]);
 
   console.log(user);
   return (
@@ -58,7 +76,7 @@ const Navbar = () => {
               </Link> */}
               {!isAuthenticated && (
                 <button
-                  onClick={() => loginWithRedirect()}
+                  onClick={ handleLogin}
                   className="hover:bg-cyan-100 w-full py-2"
                 >
                   Log In

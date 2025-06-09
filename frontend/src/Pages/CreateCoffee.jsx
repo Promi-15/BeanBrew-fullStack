@@ -40,58 +40,52 @@ const CreateCoffee = () => {
 
   return (
     <div
-      className="  lg:py-10 py-16  min-h-screen "
-      style={{
-        background:
-          "radial-gradient(circle, rgba(122,13,50,1) 0%, rgba(148,187,233,1) 100%)",
-      }}
+      className="   object-cover lg:pt-30 min-h-screen  bg-cover bg-no-repeat  bg-center  "
+      style={{ backgroundImage: "url('/create.jpg') " }}
     >
       <p className="text-4xl italic font-bold text-center my-5">
         Create A new item
       </p>
       <div
-        className="flex flex-col lg:flex-row items-center  justify-center  max-w-7xl lg:mx-auto rounded-md bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-10  px-5  
+        className="  max-w-xl lg:mx-auto rounded-md bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-10  px-5 border-2 border-gray-500 shadow-2xl shadow-gray-700 
 "
       >
         <form
-          className="flex flex-col gap-6 w-full  lg:p-10 lg:w-1/2 lg:h-[500px]"
+          className=" space-y-4  lg:p-10  "
           onSubmit={handleAdd}
         >
-          <label className="text-lg">Name</label>
+          <label className="text-lg italic font-light ">Name</label>
           <input
             type="text"
             name="name"
             id=""
-            className="p-2 border-2 w-full"
+            className="p-2 border-2 w-full mt-2 rounded-xl"
             placeholder="name"
           />
-          <label className="text-lg">Price</label>
+          <label className="text-lg italic font-light">Price</label>
           <input
             type="number"
             name="price"
             id=""
-            className="p-2 border-2 w-full"
+            className="p-2 border-2 w-full mt-2 rounded-xl"
             placeholder="price"
           />
-          <label className="text-lg">Image</label>
+          <label className="text-lg italic font-light">Image</label>
           <input
             type="text"
             name="image"
             id=""
-            className="p-2 border-2 w-full"
+            className="p-2 border-2 w-full mt-2 rounded-xl"
             placeholder="image"
           />
           <button
-            className="btn my-3 bg-transparent font-bold text-xl hover:shadow-2xl hover:shadow-cyan-200 hover:text-white"
+            className="btn my-3 bg-transparent font-bold text-xl hover:shadow-2xl hover:shadow-gray-800 hover:italic w-full border-2 border-black"
             type="submit"
           >
             Create
           </button>
         </form>
-        <div className="relative hidden lg:block">
-          <div className="absolute inset-0 bg-black opacity-50 z-10 rounded-md"></div>
-          <img src="/iceCofi1.jpg" alt="" />
-        </div>
+        
       </div>
     </div>
   );
