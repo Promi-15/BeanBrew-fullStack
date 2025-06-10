@@ -1,14 +1,8 @@
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 
 const Banner = () => {
-useEffect(() => {
-  AOS.init();
-}, []);
-  
+
+
   return (
     <div
       className="min-h-screen bg-cover bg-center relative"
@@ -21,8 +15,7 @@ useEffect(() => {
 
       <div
         className="top-28 z-10 relative p-10 space-y-10  lg:w-[900px] transition-all ease-in duration-1000"
-        data-aos="fade-up"
-        data-aos-duration="3000"
+       
       >
         <p className="text-white font-medium text-md italic">
           crafted with love, served with passion

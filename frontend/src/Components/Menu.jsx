@@ -13,24 +13,24 @@ const Menu = () => {
   }, []);
 
   return (
-    <div
-      className="py-14 text-center bg-black"
-     
-    >
-      <div className="transition-all ease-in duration-1000" data-aos="fade-down"
-      data-aos-duration="1500"
-      data-aos-delay="2000" >
+    <div className="py-14 text-center bg-black">
+      <div
+        className="transition-all ease-in duration-1000"
+        data-aos="fade-down"
+        data-aos-duration="1500"
+        data-aos-delay="2000"
+      >
         <p className="text-center text-5xl font-bold italic text-white">
-        Our Menu
-      </p>
-      <p className="text-center italic text-sm opacity-70 max-w-7xl mx-auto text-white my-5 ">
-        A coffee menu offers a delightful variety of beverages made from rich,
-        roasted coffee beans. It typically includes classics like espresso,
-        cappuccino, latte, and Americano, along with iced options and flavored
-        drinks such as caramel macchiato or mocha. Whether you prefer something
-        strong and bold or smooth and creamy, the coffee menu caters to all
-        tastes, making it perfect for every coffee lover.
-      </p>
+          Our Menu
+        </p>
+        <p className="text-center italic text-sm opacity-70 max-w-7xl mx-auto text-white my-5 ">
+          A coffee menu offers a delightful variety of beverages made from rich,
+          roasted coffee beans. It typically includes classics like espresso,
+          cappuccino, latte, and Americano, along with iced options and flavored
+          drinks such as caramel macchiato or mocha. Whether you prefer
+          something strong and bold or smooth and creamy, the coffee menu caters
+          to all tastes, making it perfect for every coffee lover.
+        </p>
       </div>
       <div className="grid lg:grid-cols-2 grid-cols-1 px-2">
         <div
