@@ -1,4 +1,4 @@
-import useUpdateModalStore from "../updateModalStore";
+import useUpdateModalStore from "../../store/updateModalStore";
 import Swal from "sweetalert2";
 const UpdateModal = () => {
   const { closeUpdateModal, updatingCoffee } = useUpdateModalStore();

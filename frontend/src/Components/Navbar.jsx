@@ -108,7 +108,7 @@ const Navbar = () => {
               >
                 Log Out
               </button> */}
-              <li className="hover:bg-cyan-100 px-8 py-2">Register</li>
+              {/* <li className="hover:bg-cyan-100 px-8 py-2">Register</li> */}
             </ul>
           </div>
         )}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoPencilOutline, IoTrashBinOutline } from "react-icons/io5";
 import Swal from "sweetalert2";
-import useUpdateModalStore from "../updateModalStore";
+import useUpdateModalStore from "../../store/updateModalStore";
 const Lists = () => {
   const [coffees, setCoffees] = useState([]);
   const { openUpdateModal, setUpdatingCoffee } = useUpdateModalStore();

@@ -5,7 +5,7 @@ import Lists from "./Pages/Lists";
 import Login from "./Pages/Login";
 import CreateCoffee from "./Pages/CreateCoffee";
 import UpdateModal from "./Components/UpdateModal";
-import useUpdateModalStore from "./updateModalStore";
+import useUpdateModalStore from "../store/updateModalStore";
 const App = () => {
   const { isUpdateModalOpen } = useUpdateModalStore();
   return (
