@@ -1,5 +1,6 @@
-import React from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 const BreadBanner = () => {
   return (
     <div className="min-h-screen  relative w-full  ">

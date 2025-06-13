@@ -1,7 +1,15 @@
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Banner = () => {
-
+  useEffect(() => {
+    AOS.init({
+      duration: 4000, // slower animations
+      easing: "ease-in-out",
+      delay: 3000, // global default delay
+    });
+  }, []);
 
   return (
     <div
