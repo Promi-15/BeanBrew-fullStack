@@ -25,7 +25,9 @@ const Banner = () => {
         className="top-28 z-10 relative p-10 space-y-10  lg:w-[900px] transition-all ease-in duration-1000"
        
       >
-        <p className="text-white font-medium text-md italic">
+        <p className="text-white font-medium text-md italic" data-aos="fade-down"
+        data-aos-duration="1500"
+        data-aos-delay="2000">
           crafted with love, served with passion
         </p>
         <h1
