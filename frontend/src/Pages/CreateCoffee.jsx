@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2"
 
 const CreateCoffee = () => {
@@ -85,7 +86,7 @@ const CreateCoffee = () => {
             Create
           </button>
         </form>
-        
+       <Link to={'/lists'}> <button>See List...</button></Link>
       </div>
     </div>
   );

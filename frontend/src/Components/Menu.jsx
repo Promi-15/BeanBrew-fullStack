@@ -6,9 +6,9 @@ import { useEffect } from "react";
 const Menu = () => {
   useEffect(() => {
     AOS.init({
-      duration: 4000, // slower animations
+      duration: 2000, // slower animations
       easing: "ease-in-out",
-      delay: 3000, // global default delay
+      delay: 1000, // global default delay
     });
   }, []);
 
@@ -18,7 +18,7 @@ const Menu = () => {
         className="transition-all ease-in duration-1000"
         data-aos="fade-down"
         data-aos-duration="1500"
-        data-aos-delay="2000"
+        data-aos-delay="500"
       >
         <p className="text-center text-5xl font-bold italic text-white">
           Our Menu

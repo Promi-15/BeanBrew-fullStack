@@ -27,7 +27,7 @@ const Banner = () => {
       >
         <p className="text-white font-medium text-md italic" data-aos="fade-down"
         data-aos-duration="1500"
-        data-aos-delay="2000">
+        data-aos-delay="1000">
           crafted with love, served with passion
         </p>
         <h1
